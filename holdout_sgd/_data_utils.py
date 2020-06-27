@@ -25,11 +25,11 @@ class MNISTSlice(MNIST):
         labels_ = labels.clone()
 
         if train:
-            self.train_data = data_
-            self.train_labels = labels_
+            self.train_node_data = data_
+            self.train_node_labels = labels_
         else:
-            self.test_data = data_
-            self.test_labels = labels_
+            self.test_node_data = data_
+            self.test_node_labels = labels_
 
     def dump(self, path):
         pickle.dump(self, open(path, 'wb'))
